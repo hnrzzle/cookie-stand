@@ -6,6 +6,8 @@
 -Store the results for each location in a seperate array... as a property of the object representing that location
 -Display the values of each array as <ol> in the browser
 */
+// time array
+const time = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: ', ];
 
 // Store Objects
 const pdx = {
@@ -20,9 +22,19 @@ const pdx = {
             const random = Math.floor(Math.random() * (max - min + 1)) + min;
             const cookiesPerHour = Math.round(random * this.avgCookies);
             this.hourlyArray.push(cookiesPerHour);
+        };
+    },
+    renderCookies: function() {
+        for (let i = 0; i < this.hourlyArray.length; i++) {
+            const list = document.getElementById('airport');
+            const li = document.createElement('li');
+            li.textContent = time[i] + this.hourlyArray[i] + ' cookies';
+            list.appendChild(li);
+
         }
     }
 };
+pdx.renderCookies();
 
 const pioneerSquare = {
     minCust: 3,
@@ -90,6 +102,7 @@ const waterfront = {
 
 // method calls and logging
 pdx.cookiesHour();
+pdx.renderCookies();
 console.log(pdx.hourlyArray);
 
 pioneerSquare.cookiesHour();
