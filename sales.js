@@ -18,13 +18,13 @@ const pdx = {
     maxCust: 65,
     avgCookies: 6.3,
     cookiesHour: function() {
-        min = Math.ceil(this.minCust);
-        max = Math.floor(this.maxCust);
-        let random = Math.floor(Math.random() * (max - min +1)) + min;
-        let sim = Math.round(random * this.avgCookies);
+        const min = Math.ceil(this.minCust);
+        const max = Math.floor(this.maxCust);
+        const random = Math.floor(Math.random() * (max - min + 1)) + min;
+        const sim = Math.round(random * this.avgCookies);
         return sim;
-        }
-        
+    }
+
 };
 // TODO: try to put this into pdx, get rid of return sim
 pdx.cookiesHour();
@@ -38,13 +38,13 @@ const pioneerSquare = {
     maxCust: 24,
     avgCookies: 1.2,
     cookiesHour: function() {
-        min = Math.ceil(this.minCust);
-        max = Math.floor(this.maxCust);
-        let random = Math.floor(Math.random() * (max - min +1)) + min;
-        let sim = Math.round(random * this.avgCookies);
+        const min = Math.ceil(this.minCust);
+        const max = Math.floor(this.maxCust);
+        const random = Math.floor(Math.random() * (max - min + 1)) + min;
+        const sim = Math.round(random * this.avgCookies);
         return sim;
     }
-}
+};
 pioneerSquare.cookiesHour();
 for (let i = 0; i < 14; i++) {
     pioneerSquareCookies.push(pioneerSquare.cookiesHour());
@@ -56,13 +56,13 @@ const powells = {
     maxCust: 24,
     avgCookies: 3.7,
     cookiesHour: function () {
-        min = Math.ceil(this.minCust);
-        max = Math.floor(this.maxCust);
-        let random = Math.floor(Math.random() * (max - min +1)) + min;
-        let sim = Math.round(random * this.avgCookies);
+        const min = Math.ceil(this.minCust);
+        const max = Math.floor(this.maxCust);
+        const random = Math.floor(Math.random() * (max - min + 1)) + min;
+        const sim = Math.round(random * this.avgCookies);
         return sim;
     }
-}
+};
 powells.cookiesHour();
 for (let i = 0; i < 14; i++) {
     powellsCookies.push(powells.cookiesHour());
@@ -74,13 +74,13 @@ const stJohns = {
     maxCust: 38,
     avgCookies: 2.3,
     cookiesHour: function () {
-        min = Math.ceil(this.minCust);
-        max = Math.floor(this.maxCust);
-        let random = Math.floor(Math.random() * (max - min +1)) + min;
-        let sim = Math.round(random * this.avgCookies);
+        const min = Math.ceil(this.minCust);
+        const max = Math.floor(this.maxCust);
+        const random = Math.floor(Math.random() * (max - min +1)) + min;
+        const sim = Math.round(random * this.avgCookies);
         return sim;
     }
-}
+};
 stJohns.cookiesHour();
 for (let i = 0; i < 14; i++) {
     stJohnsCookies.push(stJohns.cookiesHour());
@@ -92,13 +92,13 @@ const waterfront = {
     maxCust: 16,
     avgCookies: 4.6,
     cookiesHour: function () {
-        min = Math.ceil(this.minCust);
-        max = Math.floor(this.maxCust);
-        let random = Math.floor(Math.random() * (max - min +1)) + min;
-        let sim = Math.round(random * this.avgCookies);
+        const min = Math.ceil(this.minCust);
+        const max = Math.floor(this.maxCust);
+        const random = Math.floor(Math.random() * (max - min + 1)) + min;
+        const sim = Math.round(random * this.avgCookies);
         return sim;
     }
-}
+};
 waterfront.cookiesHour();
 for (let i = 0; i < 14; i++) {
     waterfrontCookies.push(waterfront.cookiesHour());
