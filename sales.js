@@ -24,13 +24,14 @@ const pdx = {
         let sim = Math.round(random * this.avgCookies);
         return sim;
         }
+        
 };
-//put this into pdx, get rid of return sim
+// TODO: try to put this into pdx, get rid of return sim
 pdx.cookiesHour();
 for (let i = 0; i < 14; i++) {
     pdxCookies.push(pdx.cookiesHour());
-    console.log('cookies array: ' + pdxCookies);
 }
+console.log(pdxCookies);
 
 const pioneerSquare = {
     minCust: 3,
@@ -44,6 +45,62 @@ const pioneerSquare = {
         return sim;
     }
 }
-
 pioneerSquare.cookiesHour();
-for (let)
+for (let i = 0; i < 14; i++) {
+    pioneerSquareCookies.push(pioneerSquare.cookiesHour());
+}
+console.log(pioneerSquareCookies);
+
+const powells = {
+    minCust: 11,
+    maxCust: 24,
+    avgCookies: 3.7,
+    cookiesHour: function () {
+        min = Math.ceil(this.minCust);
+        max = Math.floor(this.maxCust);
+        let random = Math.floor(Math.random() * (max - min +1)) + min;
+        let sim = Math.round(random * this.avgCookies);
+        return sim;
+    }
+}
+powells.cookiesHour();
+for (let i = 0; i < 14; i++) {
+    powellsCookies.push(powells.cookiesHour());
+}
+console.log(powellsCookies);
+
+const stJohns = {
+    minCust: 20,
+    maxCust: 38,
+    avgCookies: 2.3,
+    cookiesHour: function () {
+        min = Math.ceil(this.minCust);
+        max = Math.floor(this.maxCust);
+        let random = Math.floor(Math.random() * (max - min +1)) + min;
+        let sim = Math.round(random * this.avgCookies);
+        return sim;
+    }
+}
+stJohns.cookiesHour();
+for (let i = 0; i < 14; i++) {
+    stJohnsCookies.push(stJohns.cookiesHour());
+}
+console.log(stJohnsCookies);
+
+const waterfront = {
+    minCust: 2,
+    maxCust: 16,
+    avgCookies: 4.6,
+    cookiesHour: function () {
+        min = Math.ceil(this.minCust);
+        max = Math.floor(this.maxCust);
+        let random = Math.floor(Math.random() * (max - min +1)) + min;
+        let sim = Math.round(random * this.avgCookies);
+        return sim;
+    }
+}
+waterfront.cookiesHour();
+for (let i = 0; i < 14; i++) {
+    waterfrontCookies.push(waterfront.cookiesHour());
+}
+console.log(waterfrontCookies);
