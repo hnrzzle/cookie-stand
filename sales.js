@@ -7,43 +7,43 @@
 -Display the values of each array as <ol> in the browser
 */
 
+const pdxCookies = [];
+const pioneerSquareCookies = [];
+const powellsCookies = [];
+const stJohnsCookies = [];
+const waterfrontCookies = [];
 
 const pdx = {
     minCust: 23,
     maxCust: 65,
     avgCookies: 6.3,
-    randoCust: function() {
+    cookiesHour: function() {
         min = Math.ceil(this.minCust);
         max = Math.floor(this.maxCust);
         let random = Math.floor(Math.random() * (max - min +1)) + min;
-        return random;
-    },
-    simCookies: function() {
-        let sim = this.avgCookies * this.randoCust();
+        let sim = Math.round(random * this.avgCookies);
         return sim;
-    },
-    pdxProperties: [
-        this.minCust,
-        this.maxCust,
-        this.avgCookies,
-        this.randoCust,
-        this.simCookies
-        ],
-    createLi: function() {
-        const li = document.createElement('li');
-        li.textContent = 'blah';
-        return li;
-    }
+        }
 };
-pdx.createLi();
+//put this into pdx, get rid of return sim
+pdx.cookiesHour();
+for (let i = 0; i < 14; i++) {
+    pdxCookies.push(pdx.cookiesHour());
+    console.log('cookies array: ' + pdxCookies);
+}
 
-// const pdxProperties = [
-//                     pdx.minCust,
-//                     pdx.maxCust,
-//                     pdx.avgCookies,
-//                     pdx.randoCust(),
-//                     pdx.simCookies()
-//                     ];
+const pioneerSquare = {
+    minCust: 3,
+    maxCust: 24,
+    avgCookies: 1.2,
+    cookiesHour: function() {
+        min = Math.ceil(this.minCust);
+        max = Math.floor(this.maxCust);
+        let random = Math.floor(Math.random() * (max - min +1)) + min;
+        let sim = Math.round(random * this.avgCookies);
+        return sim;
+    }
+}
 
-// const newList = document.createElement('li')
-// li.textContent = this.
+pioneerSquare.cookiesHour();
+for (let)
