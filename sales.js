@@ -7,12 +7,7 @@
 -Display the values of each array as <ol> in the browser
 */
 
-// const pdxCookies = [];
-// const pioneerSquareCookies = [];
-// const powellsCookies = [];
-// const stJohnsCookies = [];
-// const waterfrontCookies = [];
-
+// Store Objects
 const pdx = {
     minCust: 23,
     maxCust: 65,
@@ -28,13 +23,6 @@ const pdx = {
         }
     }
 };
-pdx.cookiesHour();
-console.log(pdx.hourlyArray);
-
-
-
-// TODO: try to put this into pdx, get rid of return sim
-
 
 const pioneerSquare = {
     minCust: 3,
@@ -52,10 +40,6 @@ const pioneerSquare = {
     }
 };
 
-pioneerSquare.cookiesHour();
-console.log(pioneerSquare.hourlyArray);
-
-
 const powells = {
     minCust: 11,
     maxCust: 24,
@@ -69,10 +53,8 @@ const powells = {
             const cookiesPerHour = Math.round(random * this.avgCookies);
             this.hourlyArray.push(cookiesPerHour);
         }
-    }
+    },
 };
-powells.cookiesHour();
-console.log(powells.hourlyArray);
 
 const stJohns = {
     minCust: 20,
@@ -89,8 +71,6 @@ const stJohns = {
         }
     }
 };
-stJohns.cookiesHour();
-console.log(stJohns.hourlyArray);
 
 const waterfront = {
     minCust: 2,
@@ -107,5 +87,19 @@ const waterfront = {
         }
     }
 };
+
+// method calls and logging
+pdx.cookiesHour();
+console.log(pdx.hourlyArray);
+
+pioneerSquare.cookiesHour();
+console.log(pioneerSquare.hourlyArray);
+
+powells.cookiesHour();
+console.log(powells.hourlyArray);
+
+stJohns.cookiesHour();
+console.log(stJohns.hourlyArray);
+
 waterfront.cookiesHour();
 console.log(waterfront.hourlyArray);
