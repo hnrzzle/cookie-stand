@@ -7,25 +7,32 @@
 -Display the values of each array as <ol> in the browser
 */
 
-const pdxCookies = [];
-const pioneerSquareCookies = [];
-const powellsCookies = [];
-const stJohnsCookies = [];
-const waterfrontCookies = [];
+// const pdxCookies = [];
+// const pioneerSquareCookies = [];
+// const powellsCookies = [];
+// const stJohnsCookies = [];
+// const waterfrontCookies = [];
 
 const pdx = {
     minCust: 23,
     maxCust: 65,
     avgCookies: 6.3,
+    hourlyArray: [],
     cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
         const random = Math.floor(Math.random() * (max - min + 1)) + min;
-        const sim = Math.round(random * this.avgCookies);
-        return sim;
+        const cookiesPerHour = Math.round(random * this.avgCookies);
+        for (let i = 0; i < 14; i++) {
+            this.hourlyArray.push(cookiesPerHour);
+        }
     }
-
 };
+pdx.cookiesHour();
+console.log(pdx.hourlyArray);
+
+
+/*
 // TODO: try to put this into pdx, get rid of return sim
 pdx.cookiesHour();
 for (let i = 0; i < 14; i++) {
@@ -104,3 +111,4 @@ for (let i = 0; i < 14; i++) {
     waterfrontCookies.push(waterfront.cookiesHour());
 }
 console.log(waterfrontCookies);
+*/
