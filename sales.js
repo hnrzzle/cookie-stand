@@ -21,9 +21,9 @@ const pdx = {
     cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        const random = Math.floor(Math.random() * (max - min + 1)) + min;
-        const cookiesPerHour = Math.round(random * this.avgCookies);
         for (let i = 0; i < 14; i++) {
+            const random = Math.floor(Math.random() * (max - min + 1)) + min;
+            const cookiesPerHour = Math.round(random * this.avgCookies);
             this.hourlyArray.push(cookiesPerHour);
         }
     }
@@ -32,83 +32,80 @@ pdx.cookiesHour();
 console.log(pdx.hourlyArray);
 
 
-/*
+
 // TODO: try to put this into pdx, get rid of return sim
-pdx.cookiesHour();
-for (let i = 0; i < 14; i++) {
-    pdxCookies.push(pdx.cookiesHour());
-}
-console.log(pdxCookies);
+
 
 const pioneerSquare = {
     minCust: 3,
     maxCust: 24,
     avgCookies: 1.2,
+    hourlyArray: [],
     cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        const random = Math.floor(Math.random() * (max - min + 1)) + min;
-        const sim = Math.round(random * this.avgCookies);
-        return sim;
+        for (let i = 0; i < 14; i++) {
+            const random = Math.floor(Math.random() * (max - min + 1)) + min;
+            const cookiesPerHour = Math.round(random * this.avgCookies);
+            this.hourlyArray.push(cookiesPerHour);
+        }
     }
 };
+
 pioneerSquare.cookiesHour();
-for (let i = 0; i < 14; i++) {
-    pioneerSquareCookies.push(pioneerSquare.cookiesHour());
-}
-console.log(pioneerSquareCookies);
+console.log(pioneerSquare.hourlyArray);
+
 
 const powells = {
     minCust: 11,
     maxCust: 24,
     avgCookies: 3.7,
-    cookiesHour: function () {
+    hourlyArray: [],
+    cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        const random = Math.floor(Math.random() * (max - min + 1)) + min;
-        const sim = Math.round(random * this.avgCookies);
-        return sim;
+        for (let i = 0; i < 14; i++) {
+            const random = Math.floor(Math.random() * (max - min + 1)) + min;
+            const cookiesPerHour = Math.round(random * this.avgCookies);
+            this.hourlyArray.push(cookiesPerHour);
+        }
     }
 };
 powells.cookiesHour();
-for (let i = 0; i < 14; i++) {
-    powellsCookies.push(powells.cookiesHour());
-}
-console.log(powellsCookies);
+console.log(powells.hourlyArray);
 
 const stJohns = {
     minCust: 20,
     maxCust: 38,
     avgCookies: 2.3,
-    cookiesHour: function () {
+    hourlyArray: [],
+    cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        const random = Math.floor(Math.random() * (max - min +1)) + min;
-        const sim = Math.round(random * this.avgCookies);
-        return sim;
+        for (let i = 0; i < 14; i++) {
+            const random = Math.floor(Math.random() * (max - min + 1)) + min;
+            const cookiesPerHour = Math.round(random * this.avgCookies);
+            this.hourlyArray.push(cookiesPerHour);
+        }
     }
 };
 stJohns.cookiesHour();
-for (let i = 0; i < 14; i++) {
-    stJohnsCookies.push(stJohns.cookiesHour());
-}
-console.log(stJohnsCookies);
+console.log(stJohns.hourlyArray);
 
 const waterfront = {
     minCust: 2,
     maxCust: 16,
     avgCookies: 4.6,
-    cookiesHour: function () {
+    hourlyArray: [],
+    cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        const random = Math.floor(Math.random() * (max - min + 1)) + min;
-        const sim = Math.round(random * this.avgCookies);
-        return sim;
+        for (let i = 0; i < 14; i++) {
+            const random = Math.floor(Math.random() * (max - min + 1)) + min;
+            const cookiesPerHour = Math.round(random * this.avgCookies);
+            this.hourlyArray.push(cookiesPerHour);
+        }
     }
 };
 waterfront.cookiesHour();
-for (let i = 0; i < 14; i++) {
-    waterfrontCookies.push(waterfront.cookiesHour());
-}
-console.log(waterfrontCookies);
-*/
+console.log(waterfront.hourlyArray);
