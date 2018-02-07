@@ -9,6 +9,52 @@
 // time array
 const time = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: ', 'total: ' ];
 
+function Location(minCust, maxCust, avgCookies, hourlyArray) {
+    this.minCust = minCust;
+    this.maxCust = maxCust;
+    this.avgCookies = avgCookies;
+    this.hourlyArray = hourlyArray;
+}
+Location.prototype.cookiesHour = function() {
+    const min = Math.ceil(this.minCust);
+    const max = Math.floor(this.maxCust);
+    for (let i = 0; i < 15; i++) {
+        const random = Math.floor(Math.random() * (max - min + 1)) + min;
+        const cookiesPerHour = Math.round(random * this.avgCookies);
+        this.hourlyArray.push(cookiesPerHour);
+    };
+};
+Location.prototype.getTotalCookies = function() {
+    let total = 0;
+    for (let i = 0; i < 15; i++) {
+        total = total + this.hourlyArray[i];
+    }
+    this.hourlyArray.push(total);
+};
+Location.prototype.renderCookieAmt = function() {
+    for (let i = 0; i < this.hourlyArray.length; i++) {
+        const list = document.getElementById('airport');
+        const li = document.createElement('li');
+        li.textContent = time[i] + this.hourlyArray[i] + ' cookies';
+        list.appendChild(li);
+    }
+};
+
+   
+
+const pdx = new Location(23, 65, 6.3, []);
+const pioneerSquare = new Location(3, 24, 1.2, []);
+pdx.cookiesHour();
+pdx.getTotalCookies();
+pdx.renderCookieAmt();
+console.log(pdx.hourlyArray);
+pioneerSquare.cookiesHour();
+pioneerSquare.getTotalCookies();
+pioneerSquare.renderCookieAmt();
+console.log(pioneerSquare.hourlyArray);
+
+
+/*
 // Store Objects
 const pdx = {
     minCust: 23,
@@ -198,3 +244,4 @@ waterfront.cookiesHour();
 waterfront.totalCookies();
 waterfront.renderCookies();
 console.log(waterfront.hourlyArray);
+*/
