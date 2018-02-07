@@ -63,10 +63,17 @@ const powells = new Location('Powell\'s', 11, 38, 3.7);
 const stJohns = new Location('St. John\'s', 20, 38, 2.3);
 const waterfront = new Location('Waterfront', 2, 16, 4.6);
 
-// method calls and logs
+// calls and logs
 buildHeader();
 pdx.renderRow();
 pioneerSquare.renderRow();
 powells.renderRow();
 stJohns.renderRow();
 waterfront.renderRow();
+
+// Event listener
+const submission = document.getElementById('submission');
+submission.addEventListener('submit', function () {
+    console.log('submitted something');
+
+});
