@@ -1,13 +1,5 @@
-/* Create a seperate JS object literal for each shop that:
--Stores min/max hourly customers
--"            " average cookies per customer, in object properties
--Uses a method of that object to generate a random number of customers per hour use Math.random() method
--Calculate and store The simulated amounts of cookies purchased for each hour at each location using average cookies purchased and random number of customers generated
--Store the results for each location in a seperate array... as a property of the object representing that location
--Display the values of each array as <ol> in the browser
-*/
 // time array
-const time = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM', 'Total'];
+const time = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm', 'Total'];
 
 // constructor function
 function Location(name, minCust, maxCust, avgCookies) {
@@ -34,16 +26,7 @@ Location.prototype.getTotalCookies = function() {
     }
     this.hourlyArray.push(total);
 };
-/*
-Location.prototype.renderCookieAmt = function(location) {
-    for (let i = 0; i < this.hourlyArray.length; i++) {
-        const list = document.getElementById(location);
-        const li = document.createElement('li');
-        li.textContent = time[i] + this.hourlyArray[i] + ' cookies';
-        list.appendChild(li);
-    }
-};
-*/
+
 
 Location.prototype.renderRow = function() {
     this.cookiesHour();
@@ -73,38 +56,17 @@ function buildHeader () {
 };
 
 
-buildHeader();
+// defining stores
 const pdx = new Location('PDX Airport', 23, 65, 6.3);
 const pioneerSquare = new Location('Pioneer Square', 3, 24, 1.2);
 const powells = new Location('Powell\'s', 11, 38, 3.7);
 const stJohns = new Location('St. John\'s', 20, 38, 2.3);
 const waterfront = new Location('Waterfront', 2, 16, 4.6);
 
-
 // method calls and logs
+buildHeader();
 pdx.renderRow();
 pioneerSquare.renderRow();
 powells.renderRow();
 stJohns.renderRow();
 waterfront.renderRow();
-
-// pdx.renderCookieAmt('airport');
-// console.log(pdx.hourlyArray);
-// pioneerSquare.cookiesHour();
-// pioneerSquare.getTotalCookies();
-// pioneerSquare.renderCookieAmt('pioneer');
-// console.log(pioneerSquare.hourlyArray);
-// powells.cookiesHour();
-// powells.getTotalCookies();
-// powells.renderCookieAmt('powells');
-// console.log(powells.hourlyArray);
-// stJohns.cookiesHour();
-// stJohns.getTotalCookies();
-// stJohns.renderCookieAmt('st-johns');
-// console.log(stJohns.hourlyArray);
-// waterfront.cookiesHour();
-// waterfront.getTotalCookies();
-// waterfront.renderCookieAmt('waterfront');
-// console.log(waterfront.hourlyArray);
-
-
