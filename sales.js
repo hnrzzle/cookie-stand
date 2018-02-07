@@ -7,7 +7,7 @@
 -Display the values of each array as <ol> in the browser
 */
 // time array
-const time = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: ', ];
+const time = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: ', 'total: ' ];
 
 // Store Objects
 const pdx = {
@@ -18,11 +18,18 @@ const pdx = {
     cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < 15; i++) {
             const random = Math.floor(Math.random() * (max - min + 1)) + min;
             const cookiesPerHour = Math.round(random * this.avgCookies);
             this.hourlyArray.push(cookiesPerHour);
         };
+    },
+    totalCookies: function () {
+        let total = 0;
+        for (let i = 0; i < 15; i++) {
+            total = total + this.hourlyArray[i];
+        }
+        this.hourlyArray.push(total);
     },
     renderCookies: function() {
         for (let i = 0; i < this.hourlyArray.length; i++) {
@@ -34,7 +41,8 @@ const pdx = {
         }
     }
 };
-pdx.renderCookies();
+
+
 
 const pioneerSquare = {
     minCust: 3,
@@ -44,10 +52,26 @@ const pioneerSquare = {
     cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < 15; i++) {
             const random = Math.floor(Math.random() * (max - min + 1)) + min;
             const cookiesPerHour = Math.round(random * this.avgCookies);
             this.hourlyArray.push(cookiesPerHour);
+        };
+    },
+    totalCookies: function () {
+        let total = 0;
+        for (let i = 0; i < 15; i++) {
+            total = total + this.hourlyArray[i];
+        }
+        this.hourlyArray.push(total);
+    },
+    renderCookies: function() {
+        for (let i = 0; i < this.hourlyArray.length; i++) {
+            const list = document.getElementById('pioneer');
+            const li = document.createElement('li');
+            li.textContent = time[i] + this.hourlyArray[i] + ' cookies';
+            list.appendChild(li);
+
         }
     }
 };
@@ -60,12 +84,28 @@ const powells = {
     cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < 15; i++) {
             const random = Math.floor(Math.random() * (max - min + 1)) + min;
             const cookiesPerHour = Math.round(random * this.avgCookies);
             this.hourlyArray.push(cookiesPerHour);
-        }
+        };
     },
+    totalCookies: function () {
+        let total = 0;
+        for (let i = 0; i < 15; i++) {
+            total = total + this.hourlyArray[i];
+        }
+        this.hourlyArray.push(total);
+    },
+    renderCookies: function() {
+        for (let i = 0; i < this.hourlyArray.length; i++) {
+            const list = document.getElementById('powells');
+            const li = document.createElement('li');
+            li.textContent = time[i] + this.hourlyArray[i] + ' cookies';
+            list.appendChild(li);
+
+        }
+    }
 };
 
 const stJohns = {
@@ -76,10 +116,26 @@ const stJohns = {
     cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < 15; i++) {
             const random = Math.floor(Math.random() * (max - min + 1)) + min;
             const cookiesPerHour = Math.round(random * this.avgCookies);
             this.hourlyArray.push(cookiesPerHour);
+        };
+    },
+    totalCookies: function () {
+        let total = 0;
+        for (let i = 0; i < 15; i++) {
+            total = total + this.hourlyArray[i];
+        }
+        this.hourlyArray.push(total);
+    },
+    renderCookies: function() {
+        for (let i = 0; i < this.hourlyArray.length; i++) {
+            const list = document.getElementById('st-johns');
+            const li = document.createElement('li');
+            li.textContent = time[i] + this.hourlyArray[i] + ' cookies';
+            list.appendChild(li);
+
         }
     }
 };
@@ -92,27 +148,53 @@ const waterfront = {
     cookiesHour: function() {
         const min = Math.ceil(this.minCust);
         const max = Math.floor(this.maxCust);
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < 15; i++) {
             const random = Math.floor(Math.random() * (max - min + 1)) + min;
             const cookiesPerHour = Math.round(random * this.avgCookies);
             this.hourlyArray.push(cookiesPerHour);
+        };
+    },
+    totalCookies: function () {
+        let total = 0;
+        for (let i = 0; i < 15; i++) {
+            total = total + this.hourlyArray[i];
+        }
+        this.hourlyArray.push(total);
+    },
+    renderCookies: function() {
+        for (let i = 0; i < this.hourlyArray.length; i++) {
+            const list = document.getElementById('waterfront');
+            const li = document.createElement('li');
+            li.textContent = time[i] + this.hourlyArray[i] + ' cookies';
+            list.appendChild(li);
+
         }
     }
 };
 
 // method calls and logging
 pdx.cookiesHour();
+pdx.totalCookies();
 pdx.renderCookies();
+
 console.log(pdx.hourlyArray);
 
 pioneerSquare.cookiesHour();
+pioneerSquare.totalCookies();
+pioneerSquare.renderCookies();
 console.log(pioneerSquare.hourlyArray);
 
 powells.cookiesHour();
+powells.totalCookies();
+powells.renderCookies();
 console.log(powells.hourlyArray);
 
 stJohns.cookiesHour();
+stJohns.totalCookies();
+stJohns.renderCookies();
 console.log(stJohns.hourlyArray);
 
 waterfront.cookiesHour();
+waterfront.totalCookies();
+waterfront.renderCookies();
 console.log(waterfront.hourlyArray);
