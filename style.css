@@ -34,7 +34,7 @@ body {
     margin: 20px;
 }
 label, input {
-    display: block;
+    display: flex;
     align-content: center;
     padding: 5px;
 }
