@@ -1,0 +1,35 @@
+table, td {
+    border: 1px solid rgb(165, 165, 165);
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+tr {
+    background-color: white;
+}
+th {
+    background-color: #5CA4A9;
+    color: white;
+    padding: 5px;
+
+}
+
+#table tr:hover {
+    background-color: rgb(255, 255, 255)
+
+}
+tr:nth-child(even) {
+    background-color: rgb(212, 237, 248);
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #5CA4A9;
+}
+#table {
+    background-color: #D7FDF0;
+    padding: 20px;
+
+}
