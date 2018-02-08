@@ -2,12 +2,14 @@
     background-color: #D7FDF0;
     padding: 0px 30px 30px;
     margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0,0,0,0.4);
 }
 form {
     display: flex;
     align-items: center;
-
 }
+
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -23,8 +25,23 @@ table, td {
     border-collapse: collapse;
 }
 
+td {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 button {
     margin: 10px;
+    margin-left: 0px;
+    border: none;
+    background-color: #5CA4A9;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+
+}
+fieldset {
+    border-radius: 10px;
+    text-align: center;
 }
 
 th, td {
