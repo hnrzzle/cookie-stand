@@ -81,5 +81,11 @@ submission.addEventListener('submit', function () {
     console.log('What user submitted for Maximum Customers is: ' + this.maxCust.value);
     console.log('What user submitted for Average Cookies is:  ' + this.avgCookies.value);
 
-
+    const newStore = new Location(
+        this.locationName.value,
+        this.minCust.value,
+        this.maxCust.value,
+        this.avgCookies.value
+    );
+    newStore.renderRow();
 });
