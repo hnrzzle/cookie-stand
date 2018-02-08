@@ -74,6 +74,12 @@ waterfront.renderRow();
 // Event listener
 const submission = document.getElementById('submission');
 submission.addEventListener('submit', function () {
-    console.log('submitted something');
+    event.preventDefault();
+    console.log('submitted something!');
+    console.log('What user submitted for location name is: ' + this.locationName.value);
+    console.log('What user submitted for Minimum Customers ' + this.minCust.value);
+    console.log('What user submitted for Maximum Customers is: ' + this.maxCust.value);
+    console.log('What user submitted for Average Cookies is:  ' + this.avgCookies.value);
+
 
 });
