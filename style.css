@@ -28,8 +28,13 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #5CA4A9;
 }
-#table {
+#table, #form {
     background-color: #D7FDF0;
     padding: 20px;
-
+    margin: 20px;
+}
+label, input {
+    display: block;
+    align-content: center;
+    padding: 5px;
 }
