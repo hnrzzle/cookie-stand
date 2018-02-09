@@ -1,7 +1,36 @@
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+.container {
+    position: absolute;
+    display: block;
+}
+
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #5CA4A9;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.container h1 {
+    position: absolute;
+    color: blue;
+    z-index: 3;
+    margin: 100px auto;
+}
+.cookie {
+    position: absolute;
+    z-index: 1;
+    margin: 20px auto;
+
+ 
+}
+.salmon {
+    position: absolute;
+    z-index: 2;
+    margin: 0px -300px;
+    filter: invert(75%);
+
 }
