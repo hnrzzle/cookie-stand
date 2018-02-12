@@ -6,5 +6,5 @@ This is a webpage designed to represent Salmon cookies, display their locations 
 ## Getting Started
 To get started clone down the repo and run it!
 
-# Author
+## Author
 Henrique Olivera
