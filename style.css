@@ -1,0 +1,75 @@
+#table, #form {
+    background-color: #D7FDF0;
+    padding: 0px 30px 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0,0,0,0.4);
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #5CA4A9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form {
+    text-align: center;
+}
+.number {
+    width: 40px;
+}
+
+table, td {
+    border: 1px solid rgb(165, 165, 165);
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+td {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #5CA4A9;
+}
+
+button {
+    margin: 10px auto;
+    margin-left: 0px;
+    border: none;
+    background-color: #5CA4A9;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+
+}
+fieldset {
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 5px;
+}
+tr {
+    background-color: white;
+}
+th {
+    background-color: #5CA4A9;
+    color: white;
+    padding: 5px;
+
+}
+
+#table tr:hover {
+    background-color: rgb(255, 255, 255)
+
+}
+tr:nth-child(even) {
+    background-color: rgb(212, 237, 248);
+}
+
+
+label, input {
+    display: block;
+    padding: 5px;
+    margin: 0px auto;
+    width: 200px;  
+}

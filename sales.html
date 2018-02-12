@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
     <header>
-        <title>Sales</title>
-        
+        <title>Sales</title> 
     </header>
     <body>
-        <h1>PDX</h1>
-        <ul id="airport">
+        <section id="table">
+        <h1>Sales</h1>
+        <table>
+            <thead>
+                <tr id="header-row">
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+        </section>
+        <section id="form">
+            <h1>Add additional Location</h1>
+            <form id="submission">
+                <fieldset>
+                    <legend>Submit New Location Details</legend>
+                    <label for="location-name">New Location Name:</label>
+                    <input type="text" name="locationName">
 
-        </ul>
-        <h1>Pioneer Square</h1>
-        <ul id="pioneer">
+                    <label for="minCust">Minimum Customers:</label>
+                    <input type="number" name="minCust" class="number">
 
-        </ul>
-        <h1>Powell's</h1>
-        <ul id="powells">
+                    <label for="maxCust">Maximum Customers:</label>
+                    <input type="number" name="maxCust" class="number">
 
-        </ul>
-        <h1>St. John's</h1>
-        <ul id="st-johns">
-
-        </ul>
-        <h1>Waterfront</h1>
-        <ul id="waterfront">
-
-        </ul>
+                    <label for="avgCookies">Average Cookies per Customer:   </label>
+                    <input type="number" name="avgCookies" step="0.1" class="number">
+                    <button type="submit">Create New Location</button>
+                </fieldset>
+            </form>
+        </section>
     <script src="sales.js"></script>
     </body>
 
