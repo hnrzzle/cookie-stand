@@ -1,19 +1,10 @@
 # Cookie Stand
 
-## Goals
--Calculate the number of cookies each location
--Number of cookies depends on hours of operations (6:00AM - 8:00PM) (14 hours) and
-    -Minimum # of customers / hour
-    -Maximum # of customers / hour
-    -Average number of cookies / customer
+## Overview
+This is a webpage designed to represent Salmon cookies, display their locations and provide a backend service to add new locations to calculate cookies needed per day.
 
-Application must be adaptable
--Be able to add and remove locations from daily projection report
--Easily modify the input numbers for each location based on day of week, special events, and other factors
-### Design goals
--Must include image of fish, and make it look pretty
--Introduce a color scheme
-    -custom font
-    -additional images
--public facing page located @ index.html
--sales.html page that includes daily sales projections in each location
+## Getting Started
+To get started clone down the repo and run it!
+
+## Author
+Henrique Olivera
