@@ -1,6 +1,4 @@
-* {
-    border: 1px solid red;
-}
+
 h1 {
     font-family: 'Lobster', cursive;
     font-weight: bold;
@@ -42,12 +40,13 @@ body {
 #content {
     order: 1;
     width: 70%;
-    max-width: 1000px;
+    max-width: 1100px;
     background-color: #D7FDF0;
     padding: 40px;
     padding-top: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px rgba(0,0,0,0.4);
+    margin: 40px;
 }
 #locations {
     display: flex;
@@ -64,11 +63,13 @@ body {
     border-radius: 10px;
     box-shadow: 5px 5px rgba(0,0,0,0.4);
     text-align: center;
+    margin: 40px;
 }
 #main {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;    
+    justify-content: center;
+    align-items: flex-start; 
+    margin: 30px;
 }
 
 
